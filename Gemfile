@@ -14,6 +14,7 @@ gem 'rb-readline'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'qiita-markdown'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
