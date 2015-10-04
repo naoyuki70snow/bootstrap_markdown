@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MarkdownTest < ActiveSupport::TestCase
+class MdEditorTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

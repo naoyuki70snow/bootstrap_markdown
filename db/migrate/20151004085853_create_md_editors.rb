@@ -1,6 +1,6 @@
-class CreateMarkdowns < ActiveRecord::Migration
+class CreateMdEditors < ActiveRecord::Migration
   def change
-    create_table :markdowns do |t|
+    create_table :md_editors do |t|
       t.text :markdown
 
       t.timestamps null: false

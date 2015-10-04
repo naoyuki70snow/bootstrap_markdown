@@ -1,0 +1,31 @@
+<%= form_for @md_editor, :html => { :class => "form-horizontal md_editor" } do |f| %>
+
+    <% if @md_editor.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@md_editor.errors.count, "error") %> prohibited this md_editor from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @md_editor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :markdown, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :markdown, :class => 'form-control' %>
+    </div>
+    <%= error_span(@md_editor[:markdown]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            md_editors_path, :class => 'btn btn-default' %>
+
+<% end %>
